@@ -74,21 +74,38 @@ First form hit is "Follow-Up Check", the OMAS (Olerud and Molander Ankle score) 
 
 3. Follow-up Invitations/Reminders
 
-| Order | Visit | Time point (days) | Window    | Reminders            | Primary Completion Mode |
-|------|-------|-------------------|-----------|----------------------|-------------------------|
-| 1.  | Screening | 0                 | +/- 0     | None                 | Survey Mode             |
-| 2.  | Contact Details | 0                 | +/- 0     | None                 |  Survey Mode      |
-| 3.  | Baseline  | 0                 | +/- 0     | None                 |  Survey Mode      |
-| 4.  | Randomisation  | 0                 | +/- 0     | None                 |  Survey Mode      |
-| 5.  | Treatment  | 0                 | +/- 0     | None                 |  Survey Mode      |
-| 6.  | Clinical Follow-up at 6 Weeks | 42 | +/- 0     | None                 |  Forms Mode       |
+| Order | Visit | Time point (days) | Window    | Reminders             | Primary Completion Mode |
+|------|-------|-------------------|-----------|-----------------------|-------------------------|
+| 1.  | Screening | 0                 | +/- 0     | None                  | Survey Mode             |
+| 2.  | Contact Details | 0                 | +/- 0     | None                  |  Survey Mode      |
+| 3.  | Baseline  | 0                 | +/- 0     | None                  |  Survey Mode      |
+| 4.  | Randomisation  | 0                 | +/- 0     | None                  |  Survey Mode      |
+| 5.  | Treatment  | 0                 | +/- 0     | None                  |  Survey Mode      |
+| 6.  | Clinical Follow-up at 6 Weeks | 42 | +/- 0     | None                  |  Forms Mode       |
 | 7. | 8 Weeks Follow-up | 56 | -8 => +54 | 56 17:00  (Up until ) | Survey Mode |
 |    |                   |    |           | 56 19:00  (Up until ) |             |
 |    |                   |    |           | 58 17:00  (Up until ) |             |
 |    |                   |    |           | 60 17:00  (Up until ) |             |
-|    |                   |    |           | 42 17:00  (after )   |             |
-|    |                   |    |           | 56 16:00  (after )   |             |
-|    |                   |    |           | 56 19:00  (after )   |             |
-|    |                   |    |           | 58 17:00  (after )   |             |
-|    |                   |    |           | 62 17:00  (after )   |             |
-|    |                   |    |           | 67 11:00  (after )   |             |
+|    |                   |    |           | 42 17:00  (after )    |             |
+|    |                   |    |           | 56 16:00  (after )    |             |
+|    |                   |    |           | 56 19:00  (after )    |             |
+|    |                   |    |           | 58 17:00  (after )    |             |
+|    |                   |    |           | 62 17:00  (after )    |             |
+|    |                   |    |           | 67 11:00  (after )    |             
+| 8. | 4 Month Follow-up | 120 | -5 => +49 | 106 17:00 (after)     | Survey mode |
+|    |                   |     |           | 120 16:00             |             |
+|    |                   |     |           | 120 19:00             |             |
+|    |                   |     |           | 122 17:00             |             |
+|    |                   |     |           | 123 17:00 (after)     |             |
+|    |                   |     |           | 124 17:00             |             |
+|    |                   |     |           | 128 17:00 (after)     |             |
+|    |                   |     |           | 132 11:00 (after)     |             |
+|    |                   |     |           | 155 11:00 (after)     |             |
+| 9. | 12 Month follow-up | 365 | 0 => +61 | 365 16:00             | Survey mode |
+|    |                    |     |          | 365 19:00             |             |
+|    |                    |     |          | 367 17:00             |             |
+|    |                    |     |          | 371 17:00 (after)     |             |
+|    |                    |     |          | 393 17:00             |             |
+
+
+
