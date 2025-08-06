@@ -1,3 +1,3 @@
-study_name, study record_id, age, gender, postcode, randomised on, eq5d vas pre injury, fu1 primary outcome completed at, fu1 eq5dvas, fu2 po completed, fu2 vas, fu3 po completed, fu3 vas
-FAME,       10,              55,  M,      OX1 1AA,  2023-05-01,    100,                 2023-06-05 17:01:23,              25,          2023-08-07 19:55:55, 50,   2024-05-23 17:00:01, 76
-FAME,       11,              75,  F,      AA1 1AA,  2024-05-01,     99,                 2024-06-05 17:01:23,              55,          2024-08-07 19:55:55, 60,   2025-05-23 17:00:01, 50
+study_name, study record_id, age, gender, postcode, randomised on, eq5d vas pre injury, fu1 primary outcome completed at, fu1 eq5dvas, fu2 po completed, fu2 vas, fu3 po completed, fu3 vas, withdrawaldate
+FAME,       10,              55,  M,      OX1 1AA,  2023-05-01,    100,                 2023-06-05 17:01:23,              25,          2023-08-07 19:55:55, 50,   2024-05-23 17:00:01, 76,
+FAME,       11,              75,  F,      AA1 1AA,  2024-05-01,     99,                 2024-06-05 17:01:23,              55,          2024-08-07 19:55:55, 60,                      ,   , 2024-09-08
