@@ -7,6 +7,7 @@
 | FAME-FormCompletion_DATA_2025-08-04_1414.csv | REDCap CSV report containing data from all participants on when individual formas have been completed (in Survey Mode) and the completion status. *Note* If a date is missing it may be that the form was completed over the phone in survey mode, suggest that if there is a timestamp that you use that, else query the missing data. |
 | FAME-Demographics_DATA_2025-08-04_1416.csv | Demographics data for randomised participants only 
 | FAME_DataDictionary_2025-08-05.csv | Data dictionary to convert variable names and numeric answers to actual text |
+| FAME-StatsEQ5D5L_DATA_2025-08-06_1700.csv | EQ5D5L data , we are only interested in the parameters eq5d5l_vas2_uk_eng (Baseline) and eq5d5l_vas2_uk_eng_fu (all other visits)|
 
 For the data files the first row consists of headers, made up of the following columns, followed by a list of variable names.
 
