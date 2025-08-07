@@ -9,8 +9,21 @@
         "completion_data": {
             "file": "Studies/FAME/FAME-FormCompletion_DATA_2025-08-04_1414.csv",
             "record_id_col": "1",
-            "po_timestamp_col": "27",
-            },
+            "primary_outcome_data": [
+                {
+                    "visit": "8_week_follow_up_arm_1",
+                    "variable": "olerud_and_molander_ankle_score_timestamp"
+                },
+                {
+                    "visit": "4_month_follow_up_arm_1",
+                    "variable": "olerud_and_molander_ankle_score_timestamp"
+                },
+                {
+                    "visit": "12_month_follow_up_arm_1",
+                    "variable": "olerud_and_molander_ankle_score_timestamp"
+                }
+            ]
+        },
         "demographics_data": {
             "file": "Studies/FAME/FAME-Demographics_DATA_2025-08-04_1416.csv",
             "record_id_col": "1",
