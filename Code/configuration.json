@@ -9,7 +9,7 @@
         "completion_data": {
             "file": "Studies/FAME/FAME-FormCompletion_DATA_2025-08-04_1414.csv",
             "record_id_col": "1",
-            "primary_outcome_data": [
+            "follow_up_visits": [
                 {
                     "visit": "8_week_follow_up_arm_1",
                     "variable": "olerud_and_molander_ankle_score_timestamp"
