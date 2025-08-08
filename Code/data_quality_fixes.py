@@ -17,7 +17,7 @@ timestamp_schedule = {
 }
 
 # Construct expected column names for completion timestamps and eq5d scores based on short names
-completion_ts_cols = {f"{visit}_completion_data": offset for visit, offset in timestamp_schedule.items()}
+completion_ts_cols = {f"{visit}_completion_date": offset for visit, offset in timestamp_schedule.items()}
 eq5d_score_cols = {f"{visit}_eq5d": offset for visit, offset in timestamp_schedule.items()}
 
 # Replace common placeholders with NA for missing data detection

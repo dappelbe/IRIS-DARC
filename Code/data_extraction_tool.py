@@ -39,7 +39,7 @@ for study in config_data:
             continue
 
         ts_df = filtered_rows[[comp_record_id_col, variable]].copy()
-        ts_df.columns = ["record_id", f"{short_visit}_completion_data"]
+        ts_df.columns = ["record_id", f"{short_visit}_completion_date"]
         completion_ts_frames.append(ts_df)
 
     if completion_ts_frames:
