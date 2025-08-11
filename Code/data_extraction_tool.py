@@ -6,15 +6,15 @@ with open(r'Code/configuration.json', 'r') as f:
     config_data = json.load(f)
 
 # Looping through studies
-
 for study in config_data:
     study_name = study["study_name"]
     demographics_info = study["demographics_data"]
     completion_info = study["completion_data"]
     eq5d_info = study["eq5d_data"]
 
+    # -------------------------
     # Load Completion Data
-    
+    # -------------------------
     comp_file = completion_info["file"]
     comp_record_id_col_idx = int(completion_info["record_id_col"]) - 1
     comp_df = pd.read_csv(comp_file, low_memory=False)
@@ -26,11 +26,10 @@ for study in config_data:
     comp_event_col = event_col_candidates[0]
 
     # Extract Completion Timestamps using short_name from config
-    
     completion_ts_frames = []
     for visit_info in completion_info.get("follow_up_visits", []):
         visit = visit_info["visit"]
-        short_visit = visit_info.get("short_name", visit)  # fallback if short_name missing
+        short_visit = visit_info.get("short_name", visit)
         variable = visit_info["variable"]
 
         filtered_rows = comp_df[comp_df[comp_event_col] == visit]
@@ -49,8 +48,9 @@ for study in config_data:
     else:
         all_ts_df = pd.DataFrame(columns=["record_id"])
 
+    # -------------------------
     # Load Demographics Data
-    
+    # -------------------------
     demo_file = demographics_info["file"]
     demo_record_id_col_idx = int(demographics_info["record_id_col"]) - 1
     demo_df = pd.read_csv(demo_file, low_memory=False)
@@ -62,10 +62,9 @@ for study in config_data:
     demo_event_col = demo_event_col_candidates[0]
 
     # Extract Demographics Variables
-    
     demo_vars = {
         "age": demographics_info["age"],
-        "gender": demographics_info["gender"],
+        "sex": demographics_info["sex"],
         "postcode": demographics_info["postcode"],
         "randomisation_date": demographics_info["randomisation_date"],
         "deathdate": demographics_info.get("deathdate"),
@@ -87,6 +86,19 @@ for study in config_data:
 
         var_df = filtered[[demo_record_id_col, variable]].copy()
         var_df.columns = ["record_id", var_name]
+
+        # Apply mapping if provided in JSON
+        if "mapping" in var_info:
+            mapping_dict = {str(k): v for k, v in var_info["mapping"].items()}
+            var_df[var_name] = (
+                var_df[var_name]
+                .astype(str)
+                .str.strip()
+                .str.split(".").str[0]
+                .map(mapping_dict)
+                .fillna(var_df[var_name])
+            )
+
         demo_frames.append(var_df)
 
     if demo_frames:
@@ -96,8 +108,9 @@ for study in config_data:
     else:
         demo_merged_df = pd.DataFrame(columns=["record_id"] + list(demo_vars.keys()))
 
+    # -------------------------
     # Load EQ5D Data
-    
+    # -------------------------
     eq5d_file = eq5d_info["file"]
     eq5d_record_id_col_idx = int(eq5d_info["record_id_col"]) - 1
     eq5d_df = pd.read_csv(eq5d_file, low_memory=False)
@@ -135,8 +148,9 @@ for study in config_data:
     for df_fu in follow_up_eq5d_frames:
         all_eq5d_df = pd.merge(all_eq5d_df, df_fu, on="record_id", how="outer")
 
+    # -------------------------
     # Final Merge
-
+    # -------------------------
     final_df = demo_merged_df.merge(all_ts_df, on="record_id", how="outer")
     final_df = final_df.merge(all_eq5d_df, on="record_id", how="outer")
     final_df["study_name"] = study_name
@@ -145,4 +159,3 @@ for study in config_data:
 
     # Save output
     final_df.to_csv(f"output_{study_name}.csv", index=False)
-

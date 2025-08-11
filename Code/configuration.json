@@ -6,6 +6,7 @@
             "4_month_follow_up_arm_1",
             "12_month_follow_up_arm_1"
         ],
+
         "completion_data": {
             "file": "Studies/FAME/FAME-FormCompletion_DATA_2025-08-04_1414.csv",
             "record_id_col": "1",
@@ -28,15 +29,20 @@
             ]
         },
         "demographics_data": {
-            "file": "Studies/FAME/FAME-Demographics_DATA_2025-08-04_1416.csv",
+            "file": "Studies/FAME/FAME-IRISDARC_DATA_2025-08-11_0847.csv",
             "record_id_col": "1",
             "age": {
                 "visit": "screening_arm_1",
                 "variable": "patient_age"
             },
-            "gender": {
+            "sex": {
                 "visit": "screening_arm_1",
-                "variable": "gender"
+                "variable": "sex",
+                "mapping": {
+                        "1": "Male",
+                        "2": "Female",
+                        "88": "Other/prefer not to say"
+                    }
             },
             "postcode": {
                 "visit": "contact_details_arm_1",
