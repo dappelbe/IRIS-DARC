@@ -1,0 +1,84 @@
+[
+    {
+        "study_name": "FAME",
+        "visits": [
+            "8_week_follow_up_arm_1",
+            "4_month_follow_up_arm_1",
+            "12_month_follow_up_arm_1"
+        ],
+        "completion_data": {
+            "file": "Studies/FAME/FAME-FormCompletion_DATA_2025-08-04_1414.csv",
+            "record_id_col": "1",
+            "follow_up_visits": [
+                {
+                    "visit": "8_week_follow_up_arm_1",
+                    "short_name": "8_week",
+                    "variable": "olerud_and_molander_ankle_score_timestamp"
+                },
+                {
+                    "visit": "4_month_follow_up_arm_1",
+                    "short_name": "4_month",
+                    "variable": "olerud_and_molander_ankle_score_timestamp"
+                },
+                {
+                    "visit": "12_month_follow_up_arm_1",
+                    "short_name": "12_month",
+                    "variable": "olerud_and_molander_ankle_score_timestamp"
+                }
+            ]
+        },
+        "demographics_data": {
+            "file": "Studies/FAME/FAME-Demographics_DATA_2025-08-04_1416.csv",
+            "record_id_col": "1",
+            "age": {
+                "visit": "screening_arm_1",
+                "variable": "patient_age"
+            },
+            "gender": {
+                "visit": "screening_arm_1",
+                "variable": "gender"
+            },
+            "postcode": {
+                "visit": "contact_details_arm_1",
+                "variable": "postcode"
+            },
+            "randomisation_date": {
+                "visit": "randomisation_arm_1",
+                "variable": "radate"
+            },
+            "deathdate": {
+                "visit": "withdrawal_arm_1",
+                "variable": "deathdate"
+            },
+            "withdrawal_date": {
+                "visit": "withdrawal_arm_1",
+                "variable": "withdrawdate"
+            }
+        },
+        "eq5d_data": {
+            "file": "Studies/FAME/FAME-StatsEQ5D5L_DATA_2025-08-06_1700.csv",
+            "record_id_col": "1",
+            "baseline_eq5d": {
+                "visit": "baseline_arm_1",
+                "variable": "eq5d5l_vas2_uk_eng"
+            },
+            "follow_up_visits": [
+                {
+                    "visit": "8_week_follow_up_arm_1",
+                    "short_name": "8_week",
+                    "variable": "eq5d5l_vas2_uk_eng_fu"
+                },
+                {
+                    "visit": "4_month_follow_up_arm_1",
+                    "short_name": "4_month",
+                    "variable": "eq5d5l_vas2_uk_eng_fu"
+                },
+                {
+                    "visit": "12_month_follow_up_arm_1",
+                    "short_name": "12_month",
+                    "variable": "eq5d5l_vas2_uk_eng_fu"
+                }
+            ]
+        }
+    }
+]
